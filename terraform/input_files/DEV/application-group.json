@@ -1,0 +1,8 @@
+{
+    "application_group" : {
+        "1" : {
+            "app_label"     : "App-A",
+            "group_name"    : "App A: Users Group"
+        }
+    }
+}

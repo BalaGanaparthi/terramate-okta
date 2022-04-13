@@ -1,0 +1,18 @@
+{
+  "group_roles" : {
+    "1" : {
+      "group_name"            : "App A: User Group Admins",
+      "role_type"             : "GROUP_MEMBERSHIP_ADMIN",
+      "target_group_list"     : ["App A: Users Group"],
+      "target_app_list"       : [],
+      "disable_notifications" : false
+    },
+    "2" : {
+      "group_name"            : "App A: App-Admins Group",
+      "role_type"             : "APP_ADMIN",
+      "target_group_list"     : [],
+      "target_app_list"       : [],
+      "disable_notifications" : false
+    }
+  }
+}

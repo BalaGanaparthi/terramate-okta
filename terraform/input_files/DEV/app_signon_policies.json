@@ -1,0 +1,25 @@
+{
+    "app_signon_policies" : {
+        "1" : {
+            "name"            : "App A : Signon Policy",
+            "access"          : "ALLOW",
+            "groups_included" : ["App A: Users Group"],
+            "factor_mode"     : "2FA",
+            "type"            : "ASSURANCE",
+            "constraints" : {
+                "knowledge" : {
+                    "reauthenticateIn" : "PT0S",
+                    "types" : ["password"]
+                },
+                "possession" : {
+                    "deviceBound" : "OPTIONAL",
+                    "hardwareProtection" : "OPTIONAL",
+                    "phishingResistant" : "OPTIONAL",
+                    "userPresence" : "REQUIRED"
+                }
+            },
+            
+            "re_authentication_frequency" : "PT0S"
+        }
+    }
+}

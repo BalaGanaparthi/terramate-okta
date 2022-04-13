@@ -1,0 +1,6 @@
+name,description
+App A: Users Group,Group with users assigned to Application A
+App A: User Group Admins,Group with administrators administering the App A users
+App A: App-Admins Group,Application administrators group
+App B: Users Group,Group with users assigned to Application A
+App B: User Group Admins,Group with administrators administering the App A users

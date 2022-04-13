@@ -1,0 +1,60 @@
+{
+    "authenticators" : {
+        "email" : {
+            "name" : "Email",
+            "key"  : "okta_email",
+            "status" : "ACTIVE",
+            "settings" : {
+                "allowedFor": "any",
+                "tokenLifetimeInMinutes": 5
+            }
+        },
+        "password" : {
+            "name" : "Password",
+            "key"  : "okta_password",
+            "status" : "ACTIVE",
+            "settings" : {
+                "allowedFor": "recovery",
+                "tokenLifetimeInMinutes": 5
+            }
+        },
+        "phone" : {
+            "name" : "Phone",
+            "key"  : "phone_number",
+            "status" : "ACTIVE",
+            "settings" : {
+                "allowedFor" : "any"
+            }
+        },
+        "security_key" : {
+            "name" : "Security Key or Biometric",
+            "key"  : "webauthn",
+            "status" : "ACTIVE",
+            "settings" : {
+                "serVerification": "PREFERRED", 
+                "attachment": "ANY" 
+            }
+        },
+        "google_authenticator" : {
+            "name" : "Google Authenticator",
+            "key"  : "google_otp",
+            "status" : "ACTIVE",
+            "settings" : { }
+        },
+        "okta_verify" : {
+            "name" : "Okta Verify",
+            "key"  : "okta_verify",
+            "status" : "ACTIVE",
+            "settings" : {
+                "compliance": {
+                    "fips": "OPTIONAL"
+                },
+                "channelBinding": {
+                    "style": "NUMBER_CHALLENGE",
+                    "required": "NEVER"
+                },
+                "userVerification": "PREFERRED"
+            }
+        }
+    }
+}

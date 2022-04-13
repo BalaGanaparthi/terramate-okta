@@ -1,0 +1,70 @@
+{
+    "mfa_enrollment_policies" : {
+        "1" : {
+            "name" : "MFA Policy App-A",
+            "description" : "MFA policy for the users of App-A",
+            "status":"ACTIVE",
+            "is_oie" : true,
+            "groups_included" : ["App A: Users Group"],
+            "phone_number":{"enroll" : "OPTIONAL"},
+            "okta_email":{"enroll" : "REQUIRED"},
+            "google_otp":{"enroll" : "NOT_ALLOWED"},
+            "fido_webauthn":{"enroll" : "NOT_ALLOWED"},
+            "okta_verify":{"enroll" : "OPTIONAL"},
+            "okta_password":{"enroll" : "REQUIRED"},
+            "rules" : {
+                "1" : {
+                    "name" : "MFA Policy App-A Rule",
+                    "priority" : 1,
+                    "status":"ACTIVE",
+                    "enroll":"LOGIN",
+                    "network_connection":"ANYWHERE",
+                    "network_includes" : [],
+                    "network_excludes" : []
+                }
+            }
+        },
+        "2" : {
+            "name" : "MFA Policy App-A-1",
+            "description" : "MFA policy for the users of App-A",
+            "status":"ACTIVE",
+            "is_oie" : true,
+            "groups_included" : ["App A: Users Group"],
+            "phone_number":{"enroll" : "OPTIONAL"},
+            "okta_email":{"enroll" : "REQUIRED"},
+            "google_otp":{"enroll" : "NOT_ALLOWED"},
+            "fido_webauthn":{"enroll" : "NOT_ALLOWED"},
+            "okta_verify":{"enroll" : "OPTIONAL"},
+            "okta_password":{"enroll" : "REQUIRED"},
+            "rules" : {
+                "1" : {
+                    "name" : "MFA Policy App-A Rule-1",
+                    "priority" : 1,
+                    "status":"ACTIVE",
+                    "enroll":"LOGIN",
+                    "network_connection":"ANYWHERE",
+                    "network_includes" : [],
+                    "network_excludes" : []
+                },
+                "2" : {
+                    "name" : "MFA Policy App-A Rule-2",
+                    "priority" : 2,
+                    "status":"ACTIVE",
+                    "enroll":"LOGIN",
+                    "network_connection":"ANYWHERE",
+                    "network_includes" : [],
+                    "network_excludes" : []
+                },
+                "3" : {
+                    "name" : "MFA Policy App-A Rule-3",
+                    "priority" : 3,
+                    "status":"ACTIVE",
+                    "enroll":"LOGIN",
+                    "network_connection":"ANYWHERE",
+                    "network_includes" : [],
+                    "network_excludes" : []
+                }
+            }
+        }
+    }
+}

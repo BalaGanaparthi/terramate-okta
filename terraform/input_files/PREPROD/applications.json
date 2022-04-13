@@ -1,0 +1,12 @@
+{
+    "applications_oauth" : {
+        "1" : {
+            "label"                      : "App-A",
+            "type"                       : "browser",
+            "grant_types"                : ["authorization_code","interaction_code"],
+            "token_endpoint_auth_method" : "none",
+            "redirect_uris"              : ["http://localhost:8890/oidc-appredirect-A.html"],
+            "post_logout_redirect_uris"  : ["http://localhost:8890/"]
+        }
+    }
+}
