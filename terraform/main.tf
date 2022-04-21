@@ -2,6 +2,9 @@
 module "users" {
   source         = "./modules/users"
   users_filename = local.users_file
+  depends_on = [
+    module.user_base_schema_properties
+  ]
 }
 
 module "groups" {
@@ -60,7 +63,8 @@ module "profile_enrollment" {
   profile_enrollment_map   = local.profile_enrollment_map.profile_enrollment
   depends_on = [
     module.groups,
-    module.applications
+    module.applications,
+    module.user_base_schema_properties
   ]
 }
 
@@ -85,4 +89,14 @@ module "mfa_enrollment_policies_rules" {
   depends_on = [
     module.mfa_enrollment_policies
   ]
+}
+
+module "user_base_schema_properties" {
+  source                               = "./modules/user_base_schema_properties"
+  user_schema_properties_map           = local.user_base_schema_properties_map
+}
+
+module "user_schema_properties" {
+  source                               = "./modules/user_schema_properties"
+  user_schema_properties_map           = local.user_schema_properties_map
 }

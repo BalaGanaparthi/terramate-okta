@@ -1,0 +1,37 @@
+{
+    "login" : {
+        "index"       : "login",
+        "title"       : "Username",
+        "type"        : "string",
+        "required"    : true,
+        "master"      : "OKTA",
+        "permissions" : "READ_WRITE",
+        "pattern"     : ".+"
+    },
+    "others" : [
+        {
+            "index"       : "lastName",
+            "title"       : "Last name",
+            "type"        : "string",
+            "required"    : false,
+            "master"      : "OKTA",
+            "permissions" : "READ_WRITE"
+        },
+        {
+            "index"       : "email",
+            "title"       : "Primary email",
+            "type"        : "string",
+            "required"    : true,
+            "master"      : "OKTA",
+            "permissions" : "READ_WRITE"
+        },
+        {
+            "index"       : "firstName",
+            "title"       : "First name",
+            "type"        : "string",
+            "required"    : false,
+            "master"      : "OKTA",
+            "permissions" : "READ_WRITE"
+        }
+    ]
+}

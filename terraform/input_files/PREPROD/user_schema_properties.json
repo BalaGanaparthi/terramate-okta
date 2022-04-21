@@ -1,0 +1,66 @@
+{
+    "basic":[
+        {
+            "index"                 : "FavoriteMovie",
+            "title"                 : "Favorite Movie",
+            "description"           : "Customer's Favorite Movie",
+            "type"                  : "string",
+            "min_length"            : 1,
+            "max_length"            : 50,
+            "required"              : false,
+            "master"                : "PROFILE_MASTER",
+            "permissions"           : "READ_WRITE",
+            "scope"                 : "SELF",
+            "unique"                : "NOT_UNIQUE",
+            "external_name"         :"",
+            "external_namespace"    :""
+        }
+    ],
+    "enum": [
+        {
+            "index"                 : "ShoeSize",
+            "title"                 : "Shoe Size",
+            "description"           : "Customer's Shoe Size",
+            "type"                  : "string",
+            "min_length"            : 1,
+            "max_length"            : 10,
+            "required"              : false,
+            "master"                : "PROFILE_MASTER",
+            "permissions"           : "READ_WRITE",
+            "scope"                 : "SELF",
+            "external_name"         :"",
+            "external_namespace"    :"",
+            "enum"                  : [
+                                            {"const":"XXL","title":"Double Extra Large"},
+                                            {"const":"XL","title":"Extra Large"},
+                                            {"const":"L","title":"Large"},
+                                            {"const":"M","title":"Medium"},
+                                            {"const":"S","title":"Small"},
+                                            {"const":"U","title":"Undefined"}
+                                        ]
+        }
+    ],
+    "array_enum": [
+        {
+            "index"                 : "FavoriteColors",
+            "title"                 : "Favorite Colors",
+            "description"           : "Customer's Favorite Color(s)",
+            "type"                  : "array",
+            "array_type"            : "string",
+            "min_length"            : 1,
+            "max_length"            : 10,
+            "required"              : false,
+            "master"                : "PROFILE_MASTER",
+            "permissions"           : "READ_WRITE",
+            "scope"                 : "SELF",
+            "external_name"         :"",
+            "external_namespace"    :"",
+            "array_enum"            :   [
+                                            {"const":"R","title":"Red"},
+                                            {"const":"G","title":"Green"},
+                                            {"const":"B","title":"Blue"}
+                                        ]
+        }
+    ]
+    
+}

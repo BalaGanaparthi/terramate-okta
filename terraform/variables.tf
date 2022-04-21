@@ -18,4 +18,7 @@ locals {
 
   mfa_enrollment_map = jsondecode(file("./input_files/${terraform.workspace}/mfa_enrollment.json"))
 
+  user_schema_properties_map = jsondecode(file("./input_files/${terraform.workspace}/user_schema_properties.json"))
+
+  user_base_schema_properties_map = jsondecode(file("./input_files/${terraform.workspace}/user_base_schema_properties.json"))
 } 
