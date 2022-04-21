@@ -3,6 +3,16 @@ version: '3.9'
 services:
 
   terraform:
+    image: hashicorp/terraform:latest
+    container_name: automation-terraform
+    volumes:
+      - ./terraform:/infra
+    working_dir: /infra
+    command: init -upgrade
+    env_file:
+      - terraform/env/${TF_WORKSPACE}/.env
+
+  terraform-dev:
     build: 
       context: .
       dockerfile: ./Dockerfile
