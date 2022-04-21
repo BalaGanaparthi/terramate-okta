@@ -37,6 +37,6 @@ terraform/terraform.rc
 
 #Misc
 terraform/env/*
-terraform/env/DEV/*
-terraform/env/PREPROD/*
-terraform/env/PROD/*
+terraform/logs/DEV/*
+terraform/logs/PREPROD/*
+terraform/logs/PROD/*

@@ -3,7 +3,11 @@ version: '3.9'
 services:
 
   terraform:
-    image: hashicorp/terraform:latest
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+      args:       
+       - BRANCH=${OKTA_TF_BRANCH}
     container_name: automation-terraform
     volumes:
       - ./terraform:/infra
