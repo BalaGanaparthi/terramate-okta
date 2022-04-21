@@ -40,6 +40,26 @@ Install Docker by downloading from [Docker Desktop download page](https://www.do
 
 # Usage
 
+## Terraform services
+
+There are two terraform services in the docker-compose.yml file.
+    - terraform
+    - terraform-dev
+
+### terraform
+`terraform` service execute the released version of the terraform-provider-okta 
+
+### terraform-dev
+`terraform-dev` service executes the terraform-provider-okta built from sources.
+The branch from which the terraform provider is built is controlled by the `OKTA_TF_BRANCH` environment variable set in the .env file
+
+for all the commands below substuite `terraform` with `terraform-dev` to use the provider built from the sources.
+
+to force a build, execute the following command
+```bash
+docker-compose build --force-rm --no-cache --progress plain --build-arg OKTA_TF_BRANCH=update_okta_sdk_golang
+```
+
 ## Initialize Terraform
 
 Execute the command from the root folder of the project (same folder where docker-compose.yal exist
