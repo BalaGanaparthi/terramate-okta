@@ -15,4 +15,4 @@ RUN git clone https://github.com/okta/terraform-provider-okta.git ./ && \
 FROM hashicorp/terraform:latest
 
 COPY --from=BUILDER /go/bin/terraform-provider-okta $GOPATH/bin
-COPY --from=BUILDER /go/bin/.terraformrc $GOPATH/bin
+COPY --from=BUILDER /go/bin/.terraformrc ~/
