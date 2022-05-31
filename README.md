@@ -162,3 +162,13 @@ docker-compose run --rm terraform apply -target module.users -auto-approve -refr
 ```bash
 docker-compose run --rm terraform destroy
 ```
+
+
+@TBD
+|-----|
+1. Generate Input files from the existing environment
+2. Purpose [Diagrmas] and [Steps]
+3. High level Steps
+4. Situations when it can be used
+5. .....
+|-----|

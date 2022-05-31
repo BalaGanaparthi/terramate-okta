@@ -10,6 +10,10 @@ output "group_role_ids" {
   value = module.group_roles.group_role_ids_map
 }
 
+output "group_role_obj" {
+  value = module.group_roles.group_role_obj
+}
+
 output "app_names_ids_map" {
   value = module.applications.app_names_ids_map
 }

@@ -30,7 +30,7 @@
             "scope"                 : "SELF",
             "external_name"         :"",
             "external_namespace"    :"",
-            "enum"                  : [
+            "enum"                  :   [
                                             {"const":"XXL","title":"Double Extra Large"},
                                             {"const":"XL","title":"Extra Large"},
                                             {"const":"L","title":"Large"},
